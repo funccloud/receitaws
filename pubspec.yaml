@@ -1,4 +1,4 @@
-name: receitaws
+name: receitaws_api
 description: Client for Receita WS API
 version: 1.0.0
 repository: https://github.com/funccloud/receitaws
