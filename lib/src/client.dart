@@ -10,7 +10,7 @@ class ReceitaWS {
   ReceitaWS({required this.token});
 
   Future<Info> getInfo(String cnpj, {int days = 0}) async {
-    final String url = 'https://www.receitaws.com.br/v1/cnpj/$cnpj/$days';
+    final String url = 'https://www.receitaws.com.br/v1/cnpj/$cnpj/days/$days';
     final response = await get(
       Uri.parse(url),
       headers: <String, String>{
