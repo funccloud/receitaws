@@ -5,7 +5,7 @@ ReceitaWS API client
 ## Usage
 
 ```dart
-import 'package:receitaws/receitaws.dart';
+import 'package:receitaws_api/receitaws.dart';
 
 void main() {
   var api = ReceitaWS(token: 'your_token_here');
