@@ -1,4 +1,4 @@
-import 'package:receitaws_api/receitaws.dart';
+import 'package:receitaws_api/receitaws_api.dart';
 
 void main() {
   var api = ReceitaWS(token: 'your_token_here');

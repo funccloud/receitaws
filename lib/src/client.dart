@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
-import '../receitaws.dart';
+import '../receitaws_api.dart';
 import 'package:http/http.dart';
 
 class ReceitaWS {
@@ -15,6 +15,7 @@ class ReceitaWS {
       Uri.parse(url),
       headers: <String, String>{
         HttpHeaders.authorizationHeader: 'Bearer $token',
+        HttpHeaders.acceptHeader: 'application/json',
       },
     );
     if (response.statusCode == 200) {
