@@ -1,11 +1,11 @@
 name: receitaws_api
 description: Client for Receita WS API
-version: 1.0.1
+version: 1.0.2
 repository: https://github.com/funccloud/receitaws
 
 environment:
   sdk: ^3.5.0
-  flutter: ">=3.7.0 <4.0.0"
+  flutter: ">=3.7.0"
 
 # Add regular dependencies here.
 dependencies:
