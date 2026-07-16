@@ -10,7 +10,7 @@ Client Dart/Flutter para a [ReceitaWS API](https://developers.receitaws.com.br/)
 import 'package:receitaws_api/receitaws_api.dart';
 
 void main() async {
-  final api = ReceitaWS();
+  final api = ReceitaWsApi();
   final info = await api.getInfo('00000000000191');
   print(info.nome);
 }
@@ -22,7 +22,7 @@ void main() async {
 import 'package:receitaws_api/receitaws_api.dart';
 
 void main() async {
-  final api = ReceitaWS(token: 'your_token_here');
+  final api = ReceitaWsApi(token: 'your_token_here');
 
   // Receita Federal (defasagem máxima de 30 dias)
   final info = await api.getInfo(

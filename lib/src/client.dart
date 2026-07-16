@@ -12,13 +12,13 @@ import 'model.dart';
 enum Fallback { cacheOnError, noCache }
 
 /// Client da [ReceitaWS API](https://developers.receitaws.com.br/).
-class ReceitaWS {
+class ReceitaWsApi {
   static const _baseUrl = 'https://receitaws.com.br/v1';
 
   /// Token da API Comercial. Opcional para a API Pública.
   final String? token;
 
-  ReceitaWS({this.token});
+  ReceitaWsApi({this.token});
 
   Map<String, String> get _headers => {
     'Accept': 'application/json',
@@ -105,7 +105,7 @@ class ReceitaWS {
 
     if (response.statusCode == 200 && body is Map<String, dynamic>) {
       if (body['status'] == 'ERROR') {
-        throw ReceitaWsException(
+        throw ReceitaWsApiException(
           statusCode: response.statusCode,
           message: body['message']?.toString() ?? 'Erro na consulta',
           body: body,
@@ -114,7 +114,7 @@ class ReceitaWS {
       return fromJson(body);
     }
 
-    throw ReceitaWsException(
+    throw ReceitaWsApiException(
       statusCode: response.statusCode,
       message: body is Map ? body['message']?.toString() : null,
       body: body,
@@ -133,14 +133,14 @@ class ReceitaWS {
   }
 }
 
-class ReceitaWsException implements Exception {
+class ReceitaWsApiException implements Exception {
   final int statusCode;
   final String? message;
   final Object? body;
 
-  ReceitaWsException({required this.statusCode, this.message, this.body});
+  ReceitaWsApiException({required this.statusCode, this.message, this.body});
 
   @override
   String toString() =>
-      'ReceitaWsException($statusCode${message != null ? ': $message' : ''})';
+      'ReceitaWsApiException($statusCode${message != null ? ': $message' : ''})';
 }
