@@ -1,4 +1,3 @@
 library;
 
-export 'src/model.dart';
-export 'src/client.dart';
+export 'receitaws_api.dart';

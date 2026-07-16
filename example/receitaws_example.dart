@@ -1,4 +1,4 @@
-import 'package:receitaws_api/receitaws.dart';
+import 'package:receitaws_api/receitaws_api.dart';
 
 void main() async {
   // API Pública (sem token) — até 3 consultas/minuto

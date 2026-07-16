@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:receitaws_api/receitaws.dart';
+import 'package:receitaws_api/receitaws_api.dart';
 import 'package:test/test.dart';
 
 void main() {

@@ -7,7 +7,7 @@ Client Dart/Flutter para a [ReceitaWS API](https://developers.receitaws.com.br/)
 ### API Pública (sem token)
 
 ```dart
-import 'package:receitaws_api/receitaws.dart';
+import 'package:receitaws_api/receitaws_api.dart';
 
 void main() async {
   final api = ReceitaWS();
@@ -19,7 +19,7 @@ void main() async {
 ### API Comercial (com token)
 
 ```dart
-import 'package:receitaws_api/receitaws.dart';
+import 'package:receitaws_api/receitaws_api.dart';
 
 void main() async {
   final api = ReceitaWS(token: 'your_token_here');
